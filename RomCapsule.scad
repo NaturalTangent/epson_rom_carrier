@@ -70,7 +70,7 @@ module base()
     }
 }
 
-
+// End with single tang and chamfered strengtheners
 module end1()
 {
     union()
@@ -78,12 +78,22 @@ module end1()
         // End wall
         cube([end_width, end_depth, end_height]);
         
-        // Wall strength
-        cube([strength_width, strength_depth, strength_height]);
+        // Wall strength - with hacky chamfer
+        hull()
+        {
+            cube([strength_width/2, end_depth, strength_height]); 
+            translate([strength_width/2, 0, 0])
+                cube([strength_width/2, strength_depth, strength_height]);        
+        }
         
-        translate([end_width-strength_width, 0, 0])
-            cube([strength_width, strength_depth, strength_height]);
-        
+        hull()
+        {
+            translate([end_width-strength_width/2, 0, 0])
+                cube([strength_width/2, end_depth, strength_height]); 
+            translate([end_width-strength_width, 0, 0])
+                cube([strength_width/2, strength_depth, strength_height]);
+        }
+                
         // Horizontal tab
         translate([end_width/2 - tab_width/2, -tab_depth, end_height-tab_height])
             cube([tab_width, tab_depth, tab_height]);
@@ -94,14 +104,15 @@ module end1()
     }
 }
 
+// End with double tang
 module end2()
 {
     union()
     {
         // End wall
         cube([end_width, end_depth, end_height]);
-        
-        // Wall strength
+       
+        // Wall strengthener
         cube([strength_width, strength_depth, strength_height]);
         
         translate([end_width-strength_width, 0, 0])
@@ -135,5 +146,9 @@ module carrier()
                 end2();
     }
 }
+
+
+
+
 
 carrier();
