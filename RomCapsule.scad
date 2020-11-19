@@ -1,6 +1,14 @@
+/*
+This is a 3d printable ROM carrier for mounting ROMs in the capsule sockets of the Epson PX-8 and PX-4 computers.
+
+When printing you will need to enable supports to allow the horizontal tabs to print successfully.
+
+Andy Anderson 2020
+*/
+
 // Dimension of the flat base
-base_width = 17;
-base_depth = 37;
+base_width = 16.6;
+base_depth = 37.9;
 base_height = 3;
 
 // The distance between centres of the IC legs
@@ -26,12 +34,12 @@ active_pin_area = ((pin_count-1) * pin_non_gap) + (pin_count * pin_gap);
 pin_start = (base_depth - active_pin_area)/2;
 
 // The end wall dimensions
-end_width = 21;
+end_width = 19;
 end_depth = 1;
 end_height = 8;
 
 // End wall strengthening bar dimensions
-strength_width = 2;
+strength_width = 1.8;
 strength_depth = 1.5;
 strength_height = end_height;
 
