@@ -25,3 +25,7 @@ The other has;
 The MOLEX carrier is a tight fit in the MXJ socket. I based the measurement for this reproduction on the MXJ carrier.
 
 
+![In Socket](InSocket.png "In Socket")
+![With ROM](WithROM.png "With ROM")
+![Without ROM](WithoutROM.png "Without ROM")
+
