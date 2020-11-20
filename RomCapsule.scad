@@ -7,8 +7,8 @@ Andy Anderson 2020
 */
 
 // Dimension of the flat base
-base_width = 16.6;
-base_depth = 37.9;
+base_width = 16.0;
+base_depth = 37.3;
 base_height = 3;
 
 // The distance between centres of the IC legs
@@ -23,7 +23,7 @@ pin_clearance = 0.1;
 
 
 // The gap cut into the base for each IC leg
-pin_cut_depth = 1;
+pin_cut_depth = 0.5;
 pin_gap = pin_width + pin_clearance;
 
 // The size of the non-cut space between each IC leg
@@ -36,7 +36,7 @@ pin_start = (base_depth - active_pin_area)/2;
 // The end wall dimensions
 end_width = 19;
 end_depth = 1;
-end_height = 8;
+end_height = 7.8;
 
 // End wall strengthening bar dimensions
 strength_width = 1.8;
@@ -49,7 +49,7 @@ tab_depth = 4;
 tab_height = 1;
 
 // The dimensions of the locating tangs on each end wall
-tang_width = 1.5;
+tang_width = 1.4;
 tang_depth = 2;
 tang_height = 4;
 
